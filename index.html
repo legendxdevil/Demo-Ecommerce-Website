@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Seth Store - Luxury Jewelry</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="magic-text">Seth Store</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-shopping-cart" id="cart-icon"></i>
+                <i class="fas fa-user" id="user-icon"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Add this search container after your nav-icons div -->
+    <div class="search-container" id="search-container">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search products...">
+            <button id="close-search"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="search-results" id="search-results"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Your Gold Store</h1>
+            <p>Discover our exclusive collection of finest gold jewelry</p>
+            <button class="explore-btn">Explore Collection</button>
+        </div>
+    </section>
+
+    <!-- Add this section after your hero section -->
+    <section id="products" class="products">
+        <h2 class="section-title">Our Products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://i.ibb.co/fdGHcTCL/download.jpg" alt="Gold Necklace">
+                <h3>Gold Necklace</h3>
+                <p class="price">$999</p>
+                <p class="weight">Weight: 24g</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/HJMQT4t/download-1.jpg" alt="Gold Ring">
+                <h3>Gold Ring</h3>
+                <p class="price">$599</p>
+                <p class="weight">Weight: 8g</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/Pvmzs2Rn/download-2.jpg" alt="Gold Bracelet">
+                <h3>Gold Bracelet</h3>
+                <p class="price">$799</p>
+                <p class="weight">Weight: 15g</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/WpGjZ3Hq/images.png" alt="Gold Earrings">
+                <h3>Gold Earrings</h3>
+                <p class="price">$699</p>
+                <p class="weight">Weight: 12g</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collection Section -->
+    <section class="featured-collection">
+        <h2 class="section-title">Featured Collection</h2>
+        <div class="featured-grid">
+            <div class="featured-card">
+                <div class="featured-badge">New</div>
+                <img src="https://i.ibb.co/4n5kq2JZ/download-3.jpg" alt="Luxury Gold Necklace">
+                <h3>Luxury Gold Necklace</h3>
+                <p class="price">$1,499</p>
+                <p class="weight">Weight: 32g | 24K</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="featured-card">
+                <div class="featured-badge">Best Seller</div>
+                <img src="https://i.ibb.co/TDzZtTq2/download-4.jpg" alt="Diamond Gold Ring">
+                <h3>Diamond Gold Ring</h3>
+                <p class="price">$2,999</p>
+                <p class="weight">Weight: 18g | 22K</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="featured-card">
+                <div class="featured-badge">Limited</div>
+                <img src="https://i.ibb.co/XfRqw451/download-5.jpg" alt="Premium Gold Bracelet">
+                <h3>Premium Gold Bracelet</h3>
+                <p class="price">$1,899</p>
+                <p class="weight">Weight: 25g | 24K</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <i class="fas fa-times" id="close-cart"></i>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-total">
+            <h4>Total: ₹<span id="cart-total">0</span></h4>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="name-title">Shivam Soni</div>
+                    <h3>Welcome to Our Gold Store</h3>
+                    <p>We are passionate about providing the finest quality gold jewelry since 2010. Our commitment to excellence and authenticity has made us a trusted name in the industry.</p>
+                    <ul class="about-features">
+                        <li>✨ Premium Quality Gold</li>
+                        <li>🏆 Certified Products</li>
+                        <li>🛡️ Secure Transactions</li>
+                        <li>🚚 Worldwide Shipping</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://i.ibb.co/84rZK0s8/imageonline-co-glowimage.png" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Paryagran, Uttar Pradesh</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+91 7703805706</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>creazy2business@gmail.com</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
